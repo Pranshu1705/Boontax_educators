@@ -8,7 +8,7 @@
 <meta name="description" content="2027 Boon Tax Pro All Access Pass: a full year of expert-led tax continuing education. 53 scheduled CPA CPE / IRS CE hours of federal tax webinars. Early-bird $999 through January 15, 2027.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap">
 <style>
 /* Layout: navy hero with glowing brand arcs + arched photo → light sections on a soft blue wash,
    alternating with navy bands. Short copy; visuals carry the "full year" idea. Single light look matching the live site. */
@@ -506,6 +506,142 @@ dialog.cd-dlg[open]{display:grid;grid-template-rows:minmax(0,1fr) auto;animation
   .btn-gold::after,.hero::before,.promo::after{display:none}
   .hero .arcs path,.final .arcs path{stroke-dasharray:none}
 }
+
+/* ===== Round 9 ===== */
+/* Eyebrows: distinct face, caps, larger, coloured, with a gold lead line */
+.kick{font:700 .9rem/1.2 "Outfit",var(--f-d);text-transform:uppercase;letter-spacing:.16em;color:var(--brand);display:inline-flex;align-items:center;gap:10px}
+.kick::before{content:"";width:26px;height:2px;border-radius:2px;background:var(--gold);flex:none}
+.head.c .kick,.reviews .rh .kick{justify-self:center}
+.about .kick,.final .kick{color:var(--brand-300)}
+.pill{font-size:.78rem}
+.pill s{opacity:.7;font-weight:600}
+
+/* Hero: second line travels on its own path */
+.hero .arcs .ln2{stroke-dasharray:160 900;animation:comet2 4.5s linear infinite}
+.hero .arcs .ln2g{opacity:.35}
+@keyframes comet2{from{stroke-dashoffset:1060}to{stroke-dashoffset:0}}
+
+/* Hero stage: cutout over halo + rings, floating cards */
+.hero-r{width:min(100%,620px);padding:0;align-self:end;margin-bottom:calc(-1 * clamp(44px,6vw,80px))}
+.stage{position:relative;aspect-ratio:1/1.02;width:100%}
+.halo{position:absolute;left:12%;right:12%;bottom:0;top:14%;border-radius:999px 999px 32px 32px;background:radial-gradient(120% 90% at 50% 15%,#2a8fc4 0%,#0b5a86 45%,#0d2d4c 100%);box-shadow:0 0 0 1px rgba(79,179,227,.5),0 0 90px -10px rgba(79,179,227,.55)}
+.rings{position:absolute;left:50%;top:22%;width:118%;aspect-ratio:1;transform:translateX(-50%);border-radius:50%;border:1px solid rgba(79,179,227,.25);pointer-events:none}
+.rings::before,.rings::after{content:"";position:absolute;inset:9%;border-radius:50%;border:1px dashed rgba(255,205,87,.22)}
+.rings::after{inset:20%;border:1px solid rgba(79,179,227,.18)}
+.cutout{position:absolute;left:50%;bottom:0;height:96%;width:auto;max-width:none;transform:translateX(-50%);filter:drop-shadow(0 24px 40px rgba(0,0,0,.35));z-index:1}
+.fc{position:absolute;z-index:3;display:flex;gap:10px;align-items:center;background:rgba(18,48,77,.92);border:1px solid rgba(79,179,227,.35);border-radius:14px;padding:10px 14px 10px 11px;box-shadow:0 18px 36px -16px rgba(0,0,0,.7);color:#fff;white-space:nowrap;animation:floaty 6s ease-in-out infinite}
+.fc .ico{width:30px;height:30px;padding:6px;border-radius:9px;background:rgba(79,179,227,.16);color:var(--brand-300);stroke-width:2}
+.fc div{display:grid;line-height:1.2}
+.fc b{font:800 1rem var(--f-d)}
+.fc small{font-size:.68rem;color:var(--on-ink-2);letter-spacing:.04em}
+.fc.vip{top:-1%;left:-8%;background:linear-gradient(135deg,#ffe08a,#ffcd57 60%,#f2b632);border-color:#ffe7a3;color:var(--ink);animation-delay:-1s}
+.fc.vip .ico{background:rgba(11,31,51,.12);color:var(--ink)}
+.fc.vip small{color:var(--gold-ink);font-weight:800;text-transform:uppercase;letter-spacing:.14em}
+.fc.irs{top:10%;right:0;animation-delay:-2.5s}
+.fc.irs .ico{color:#7ee2b0;background:rgba(126,226,176,.14)}
+.fc.hrs{top:36%;right:-2%;animation-delay:-3.5s}
+.fc.hrs .ico{color:var(--gold);background:rgba(255,205,87,.14)}
+.fc.web{top:40%;left:-2%;animation-delay:-.5s}
+.fc.fac{bottom:22%;right:0;animation-delay:-4.5s}
+.fc.deal{bottom:16%;left:0;animation-delay:-2s}
+.fc.deal .ico{color:var(--gold);background:rgba(255,205,87,.14)}
+.mini-stack{display:flex}
+.mini-stack i{font:700 .6rem/26px var(--f-d);font-style:normal;width:26px;height:26px;border-radius:50%;text-align:center;background:var(--brand);border:2px solid #12304d;margin-left:-8px;color:#fff}
+.mini-stack i:first-child{margin-left:0}.mini-stack i:nth-child(2){background:#2f86b2}.mini-stack i:nth-child(3){background:var(--ink)}
+.name{position:absolute;z-index:3;left:50%;bottom:4%;transform:translateX(-50%);text-align:center;background:var(--white);color:var(--ink);border-radius:12px;padding:8px 16px;display:grid;box-shadow:0 14px 30px -12px rgba(0,0,0,.6);white-space:nowrap}
+.name b{font:800 .92rem var(--f-d)}
+.name small{font-size:.72rem;color:var(--brand);font-weight:600}
+.mpass{display:none}
+
+/* Mobile pass card replaces the stage */
+@media (max-width:960px){
+  .stage{display:none}
+  .hero-r{width:100%;max-width:520px;justify-self:stretch;margin-bottom:0;align-self:auto}
+  .mpass{display:grid;gap:14px;background:var(--white);color:var(--text);border-radius:22px;overflow:hidden;padding-bottom:16px;box-shadow:0 30px 60px -24px rgba(0,0,0,.7),0 0 0 1px rgba(79,179,227,.35)}
+  .mp-top{position:relative;display:flex;justify-content:space-between;align-items:flex-end;background:radial-gradient(120% 120% at 90% 0%,#2a8fc4,#0b5a86 50%,#0d2d4c);color:#fff;padding:18px 0 0 18px;min-height:150px;overflow:hidden}
+  .mp-tt{display:grid;gap:2px;padding-bottom:18px;position:relative;z-index:1}
+  .mp-k{display:inline-flex;gap:6px;align-items:center;justify-self:start;background:var(--gold);color:var(--ink);font:800 .66rem "Outfit",var(--f-d);letter-spacing:.14em;text-transform:uppercase;border-radius:999px;padding:4px 10px 4px 7px}
+  .mp-k .ico{width:14px;height:14px}
+  .mp-tt b{font:800 2rem/1.05 var(--f-d);margin-top:6px}
+  .mp-tt small{color:#cfe0ee;font-size:.8rem}
+  .mp-top img{width:150px;height:170px;object-fit:cover;object-position:top;align-self:flex-end;margin-bottom:-2px;filter:drop-shadow(0 10px 20px rgba(0,0,0,.4))}
+  .mp-grid{display:grid;grid-template-columns:repeat(3,1fr);margin:0 16px;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .mp-grid div{text-align:center;padding:10px 4px;border-left:1px solid var(--line);display:grid}
+  .mp-grid div:first-child{border-left:0}
+  .mp-grid b{font:800 1.05rem var(--f-d);color:var(--ink)}
+  .mp-grid small{font-size:.7rem;color:var(--muted)}
+  .mp-price{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:0 16px}
+  .mp-price b{font:800 2rem/1 var(--f-d);color:var(--ink)}
+  .mp-price s{color:var(--muted);margin-left:8px;font-size:.95rem}
+  .mp-code{display:inline-flex;gap:6px;align-items:center;border:1.5px dashed var(--brand);background:var(--wash);color:var(--ink);border-radius:10px;padding:8px 10px;font:700 .82rem ui-monospace,Consolas,monospace;letter-spacing:.06em;cursor:pointer}
+  .mp-code .ico{width:15px;height:15px;color:var(--brand)}
+  .mpass .btn{margin:0 16px}
+}
+
+/* CTA shine on all primary buttons */
+.btn-w::after,.btn-b::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;z-index:1;pointer-events:none;background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-20deg);animation:sweep 5s ease-in-out infinite}
+.btn-b::after{animation-delay:1.2s}
+.btn-w:hover::after,.btn-b:hover::after{opacity:0;animation:none}
+.btn-lg{min-height:58px;padding:0 30px;font-size:1.05rem}
+
+.about .ctas{margin-top:4px}
+
+/* Final CTA: bigger */
+.final{padding-block:clamp(96px,12vw,160px)}
+.final .wrap{gap:22px}
+.final h2{font-size:clamp(2.4rem,5.6vw,4.4rem);max-width:15ch}
+.fin-sub{color:#c7d6e4;max-width:56ch;font-size:1.15rem}
+.fin-facts{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.fin-facts li{display:flex;gap:8px;align-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:9px 16px;font-size:.92rem;color:#d7e4ef}
+.fin-facts b{color:#fff;font-family:var(--f-d)}
+.fin-facts .ico{width:18px;height:18px;color:var(--gold)}
+.fin-price{display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:6px 14px;margin-top:6px}
+.fin-price span{font:800 3.2rem/1 var(--f-d);color:#fff;letter-spacing:-.03em}
+.fin-price s{color:var(--on-ink-2);font-size:1.2rem}
+.fin-price em{font-style:normal;color:var(--gold);font-weight:600;font-size:.95rem;flex-basis:100%;text-align:center}
+
+@media (max-width:640px){.final .ctas .btn{width:100%}.fin-price span{font-size:2.6rem}}
+@media (prefers-reduced-motion:reduce){.btn-w::after,.btn-b::after{display:none}.hero .arcs .ln2{stroke-dasharray:none}.fc{animation:none}}
+
+/* ===== Round 10 ===== */
+/* Floating cards: clearer drift with a slight sway */
+@keyframes floaty{0%,100%{transform:translate(0,0)}25%{transform:translate(3px,-7px)}50%{transform:translate(0,-12px)}75%{transform:translate(-3px,-6px)}}
+.fc{animation:floaty 6s ease-in-out infinite}
+/* About: words brighten as the reader scrolls through */
+.about .w{opacity:.22;transition:opacity .35s ease,color .35s ease}
+.about .w.on{opacity:1}
+.about .txt p .w.on{color:#fff}
+.about .ticks li{opacity:.35;transform:translateX(-6px);transition:opacity .5s ease,transform .5s var(--ease-out)}
+.about .ticks li.on{opacity:1;transform:none}
+.about .arcs path{opacity:.18}
+
+/* Hero load-in sequence */
+.ld{animation:ldin .8s var(--ease-out) backwards}
+@keyframes ldin{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.ld-pop{animation:ldpop .7s var(--ease-out) backwards}
+@keyframes ldpop{from{opacity:0;transform:scale(.85) translateY(10px)}to{opacity:1;transform:none}}
+.cutout.ld{animation:ldimg 1s var(--ease-out) backwards}
+@keyframes ldimg{from{opacity:0;transform:translate(-50%,30px)}to{opacity:1;transform:translateX(-50%)}}
+
+/* Scroll reveal variants */
+.rise-l{animation:risel .7s var(--ease-out) backwards}
+@keyframes risel{from{opacity:0;transform:translateX(-28px)}to{opacity:1;transform:none}}
+.rise-s{animation:rises .6s var(--ease-out) backwards}
+@keyframes rises{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:none}}
+
+/* Moving shine on every button */
+.btn::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:38%;z-index:1;pointer-events:none;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);animation:sweep 3.6s ease-in-out infinite}
+.btn-o::after{background:linear-gradient(100deg,transparent,rgba(255,255,255,.28),transparent);animation-delay:.6s}
+.btn-b::after{animation-delay:1.2s}
+.btn:hover::after{animation-duration:1.1s;opacity:1}
+@keyframes sweep{0%,55%{left:-60%}100%{left:130%}}
+.nav .books,.copy-btn,.code button,.mp-code{position:relative;overflow:hidden}
+.nav .books::after,.code button::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);animation:sweep 4.2s ease-in-out infinite;pointer-events:none}
+
+@media (prefers-reduced-motion:reduce){
+  .btn::after,.nav .books::after,.code button::after{display:none}
+  .about .w,.about .ticks li{opacity:1;transform:none}
+}
 </style>
 </head>
 <body>
@@ -536,6 +672,8 @@ dialog.cd-dlg[open]{display:grid;grid-template-rows:minmax(0,1fr) auto;animation
   <symbol id="i-star" viewBox="0 0 24 24"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></symbol>
   <symbol id="i-chev-l" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6" /></symbol>
   <symbol id="i-chev-r" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6" /></symbol>
+  <symbol id="i-crown" viewBox="0 0 24 24"><path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z" /><path d="M5 21h14" /></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" /><path d="M21 3v5h-5" /><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" /><path d="M8 16H3v5" /></symbol>
 </defs></svg>
 
 <header class="hdr">
@@ -560,16 +698,19 @@ dialog.cd-dlg[open]{display:grid;grid-template-rows:minmax(0,1fr) auto;animation
   <svg class="arcs" viewBox="0 0 1440 720" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true">
     <defs>
       <linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#4fb3e3" stop-opacity="0"/><stop offset=".55" stop-color="#4fb3e3"/><stop offset="1" stop-color="#4fb3e3" stop-opacity=".1"/></linearGradient>
+      <linearGradient id="g2" x1="0" x2="1"><stop offset="0" stop-color="#4fb3e3" stop-opacity="0"/><stop offset=".35" stop-color="#4fb3e3"/><stop offset="1" stop-color="#ffcd57" stop-opacity=".6"/></linearGradient>
       <filter id="glow" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="6"/></filter>
     </defs>
     <path d="M-80 700 C 300 380, 760 120, 1520 260" stroke="url(#g1)" stroke-width="8" filter="url(#glow)" opacity=".7"/>
     <path d="M-80 700 C 300 380, 760 120, 1520 260" stroke="url(#g1)" stroke-width="1.6"/>
     <path d="M200 760 C 520 520, 980 360, 1520 420" stroke="url(#g1)" stroke-width="1" opacity=".55"/>
+    <path class="ln2g" d="M700 380 C 900 300, 1120 460, 1520 360" stroke="url(#g2)" stroke-width="7" filter="url(#glow)"/>
+    <path class="ln2" d="M700 380 C 900 300, 1120 460, 1520 360" stroke="url(#g2)" stroke-width="1.6"/>
     <path d="M760 -40 C 900 220, 1200 420, 1520 470" stroke="#ffcd57" stroke-width="1" opacity=".22"/>
   </svg>
   <div class="wrap">
     <div class="hero-l">
-      <span class="pill eb"><i></i>Early bird · Save $200 until Jan 15</span>
+      <span class="pill eb"><i></i>Early-bird offer: $999 <s>$1,199</s> · Save $200 · Ends Jan 15, 2027</span>
       <h1 id="h1">2027 Boon Tax Pro <b>All Access Pass</b></h1>
       <p class="one">A full year of expert-led tax continuing education. Every scheduled live webinar, January through December, with one pass.</p>
       <div class="ctas">
@@ -577,16 +718,39 @@ dialog.cd-dlg[open]{display:grid;grid-template-rows:minmax(0,1fr) auto;animation
         <a class="btn btn-o" href="#schedule">View Schedule</a>
       </div>
       <div class="facts">
-        <div class="fact"><span><svg class="ico"><use href="#i-cal"/></svg>Coverage</span><b>Jan 1 – Dec 31</b></div>
+        <div class="fact"><span><svg class="ico"><use href="#i-cal"/></svg>Coverage</span><b>Jan 1 – Dec 31, 2027</b></div>
         <div class="fact"><span><svg class="ico"><use href="#i-award"/></svg>CPE / CE</span><b class="tnum">53 hrs scheduled</b></div>
         <div class="fact"><span><svg class="ico"><use href="#i-tag"/></svg>Price</span><b class="tnum"><span class="eb">$999<s>$1,199</s></span><span class="rp">$1,199</span></b></div>
       </div>
     </div>
     <div class="hero-r">
-      <div class="arch"><img src="img/learning.webp" alt="Tax professional attending an online course on a laptop" width="430" height="538"></div>
-      <div class="chip c1"><small>Live webinars</small><b class="tnum" id="n-web">26+</b></div>
-      <div class="chip c2"><small>Instructors</small><b class="tnum">19</b></div>
-      <div class="chip c3 eb"><small>Code EARLY2027</small><b>Save $200</b></div>
+      <div class="stage" aria-hidden="true">
+        <img class="cutout" src="img/hero-person.webp" alt="Tax professional" width="760" height="993">
+        <div class="fc vip"><svg class="ico"><use href="#i-crown"/></svg><div><small>VIP Access</small><b>2027 All Access Pass</b></div></div>
+        <div class="fc hrs"><svg class="ico"><use href="#i-award"/></svg><div><b class="tnum">53 hrs</b><small>CPE / CE scheduled</small></div></div>
+        <div class="fc web"><svg class="ico"><use href="#i-play"/></svg><div><b class="tnum" id="n-web">26+</b><small>Live webinars</small></div></div>
+        <div class="fc irs"><svg class="ico"><use href="#i-shield"/></svg><div><b>IRS approved</b><small>CE provider</small></div></div>
+        <div class="fc fac"><span class="mini-stack"><i>JB</i><i>SH</i><i>MS</i></span><div><b class="tnum">19</b><small>Expert instructors</small></div></div>
+        <div class="fc deal eb"><svg class="ico"><use href="#i-tag"/></svg><div><small>Code EARLY2027</small><b>$999 · Save $200</b></div></div>
+      </div>
+
+      <!-- Mobile: the pass itself -->
+      <div class="mpass">
+        <div class="mp-top">
+          <div class="mp-tt"><span class="mp-k"><svg class="ico"><use href="#i-crown"/></svg>VIP All Access</span><b>2027 Pass</b><small>Valid Jan 1 – Dec 31, 2027</small></div>
+          <img src="img/hero-person.webp" alt="" width="150" height="196">
+        </div>
+        <div class="mp-grid">
+          <div><b class="tnum">53 hrs</b><small>CPE / CE</small></div>
+          <div><b class="tnum">26+</b><small>Webinars</small></div>
+          <div><b class="tnum">19</b><small>Instructors</small></div>
+        </div>
+        <div class="mp-price">
+          <div><b class="tnum"><span class="eb">$999</span><span class="rp">$1,199</span></b><s class="eb">$1,199</s></div>
+          <button type="button" class="mp-code eb" data-copy="EARLY2027"><svg class="ico"><use href="#i-copy"/></svg>EARLY2027</button>
+        </div>
+        <a class="btn btn-gold" href="#enroll">Get Your 2027 Pass <svg class="ico"><use href="#i-arrow"/></svg></a>
+      </div>
     </div>
   </div>
 </section>
@@ -635,6 +799,10 @@ dialog.cd-dlg[open]{display:grid;grid-template-rows:minmax(0,1fr) auto;animation
         <li><svg class="ico"><use href="#i-check"/></svg>Explore many areas of federal tax</li>
         <li><svg class="ico"><use href="#i-check"/></svg>Plan your CPE/CE all year</li>
       </ul>
+      <div class="ctas">
+        <a class="btn btn-gold" href="#enroll">Get Your 2027 All Access Pass <svg class="ico"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-o" href="#schedule">See the 2027 schedule</a>
+      </div>
     </div>
   </div>
 </section>
@@ -780,15 +948,25 @@ dialog.cd-dlg[open]{display:grid;grid-template-rows:minmax(0,1fr) auto;animation
 
 <!-- 8 · FINAL CTA -->
 <section class="band final" aria-labelledby="fin-h">
-  <svg class="arcs" viewBox="0 0 1440 460" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true">
-    <path d="M-60 470 C 300 40, 1140 40, 1500 470" stroke="#4fb3e3" stroke-width="7" opacity=".35" filter="url(#glow)"/>
-    <path d="M-60 470 C 300 40, 1140 40, 1500 470" stroke="#4fb3e3" stroke-width="1.4" opacity=".8"/>
+  <svg class="arcs" viewBox="0 0 1440 560" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true">
+    <path d="M-60 570 C 300 40, 1140 40, 1500 570" stroke="#4fb3e3" stroke-width="7" opacity=".35" filter="url(#glow)"/>
+    <path d="M-60 570 C 300 40, 1140 40, 1500 570" stroke="#4fb3e3" stroke-width="1.4" opacity=".8"/>
+    <path d="M100 600 C 420 160, 1020 160, 1340 600" stroke="#ffcd57" stroke-width="1" opacity=".3"/>
   </svg>
   <div class="wrap">
+    <p class="kick">January → December 2027</p>
     <h2 id="fin-h">Make 2027 Your Year of <span>Professional Growth</span></h2>
-    <p>Twelve months of specialized tax education, one annual pass.</p>
+    <p class="fin-sub">Twelve months of specialized federal tax education from instructors who have worked inside the IRS. One annual pass covers it all.</p>
+    <ul class="fin-facts">
+      <li><svg class="ico"><use href="#i-award"/></svg><b class="tnum">53 hrs</b> CPE/CE scheduled</li>
+      <li><svg class="ico"><use href="#i-cal"/></svg><b>Jan 1 – Dec 31, 2027</b></li>
+      <li><svg class="ico"><use href="#i-plus"/></svg><b>New courses</b> included free</li>
+      <li><svg class="ico"><use href="#i-refresh"/></svg><b>One-time</b> purchase, no auto-renewal</li>
+    </ul>
+    <div class="fin-price eb"><span class="tnum">$999</span><s class="tnum">$1,199</s><em>Save $200 with EARLY2027 · ends Jan 15, 2027</em></div>
     <div class="ctas">
-      <a class="btn btn-gold" href="#enroll">Get Your 2027 All Access Pass <svg class="ico"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-gold btn-lg" href="#enroll">Get Your 2027 All Access Pass <svg class="ico"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-o btn-lg" href="#schedule">View the full schedule</a>
     </div>
   </div>
 </section>
@@ -985,15 +1163,46 @@ if('IntersectionObserver' in window){let past=false,at=false;const u=()=>bar.cla
 
 /* Scroll reveal: animate items as they enter, staggered per group. Items already on screen at load are left alone. */
 if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
-  const sel='.head,.sch-head,.incl > div,.sbar > div,.about .wrap > *,.roles li,.pc,.faculty,.promo,.vs,.plan,.faq details,.final h2,.final p,.final .ctas';
+  const sel='.acc .wrap > *,.head,.sch-head,.incl > div,.fine-note,.sbar > div,.tabs,.about .wrap > div:first-child,.about .ctas,.inst > div:first-child > *,.roles li,.pc,.faculty,.reviews .rh,.rv-row,.promo,.enroll > div:first-child > *,.plan,.faqw .head > *,.faq details,.final .wrap > *,.foot .wrap > *';
   const io=new IntersectionObserver(es=>es.forEach(e=>{
     if(!e.isIntersecting)return;
     const el=e.target, sibs=[...el.parentElement.children];
-    el.style.animationDelay=Math.min(sibs.indexOf(el),6)*70+'ms';
-    el.classList.add('rise');io.unobserve(el);
+    el.style.animationDelay=(80+Math.min(sibs.indexOf(el),8)*110)+'ms';
+    el.classList.add(el.matches('.roles li,.faq details')?'rise-l':el.matches('.pc,.plan,.promo,.incl > div,.sbar > div')?'rise-s':'rise');io.unobserve(el);
   }),{rootMargin:'0px 0px -8% 0px'});
   document.querySelectorAll(sel).forEach(el=>{if(el.getBoundingClientRect().top>innerHeight)io.observe(el);});
 }
+
+
+/* Hero load-in: staggered on page load */
+(()=>{if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  const seq=[...document.querySelectorAll('.hero-l > *')];
+  seq.forEach((el,i)=>{el.style.animationDelay=(120+i*110)+'ms';el.classList.add('ld');});
+  const img=document.querySelector('.cutout');if(img){img.style.animationDelay='250ms';img.classList.add('ld');}
+  document.querySelectorAll('.stage .fc, .mpass').forEach((el,i)=>{const d=el.style.animationDelay;el.style.animationDelay=(700+i*140)+'ms';el.classList.add('ld-pop');
+    el.addEventListener('animationend',function done(e){if(e.animationName!=='ldpop')return;el.classList.remove('ld-pop');el.style.animationDelay=d;el.removeEventListener('animationend',done);});});
+})();
+
+/* About: split into words; brighten them in step with scroll position */
+(()=>{const ab=document.querySelector('.about');if(!ab)return;
+  const targets=[ab.querySelector('h2'),ab.querySelector('.txt > p')].filter(Boolean);
+  const words=[];
+  targets.forEach(root=>{const walk=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);const nodes=[];while(walk.nextNode())nodes.push(walk.currentNode);
+    nodes.forEach(n=>{const frag=document.createDocumentFragment();n.textContent.split(/(\s+)/).forEach(part=>{if(!part)return;if(/^\s+$/.test(part)){frag.appendChild(document.createTextNode(part));return;}
+      const s=document.createElement('span');s.className='w';s.textContent=part;words.push(s);frag.appendChild(s);});n.parentNode.replaceChild(frag,n);});});
+  const ticks=[...ab.querySelectorAll('.ticks li')];
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){words.forEach(w=>w.classList.add('on'));ticks.forEach(t=>t.classList.add('on'));return;}
+  let raf=0;
+  const update=()=>{raf=0;const r=ab.getBoundingClientRect(),vh=innerHeight;
+    // 0 when the section top reaches 85% of the viewport, 1 when its middle reaches 35%
+    const p=Math.min(1,Math.max(0,(vh*.85-r.top)/(vh*.5+r.height*.5)));
+    const n=Math.round(p*1.15*words.length);
+    words.forEach((w,i)=>w.classList.toggle('on',i<n));
+    ticks.forEach((t,i)=>t.classList.toggle('on',p>.55+i*.07));
+  };
+  addEventListener('scroll',()=>{if(!raf)raf=requestAnimationFrame(update);},{passive:true});
+  addEventListener('resize',update);update();
+})();
 </script>
 
 </body>
