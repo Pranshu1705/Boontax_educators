@@ -97,7 +97,10 @@ p{margin:0} img{max-width:100%;display:block} a{color:var(--brand)}
 .acc{background:var(--white);border-bottom:1px solid var(--line)}
 .acc .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:18px 48px;padding-block:26px}
 .acc p{font:700 .9rem var(--f-d);color:var(--ink)}
-.acc img{height:44px;width:auto}
+.acc img{height:44px;width:auto;transition:transform .35s var(--ease-out),filter .35s ease}
+.acc img.nasba{height:52px}
+.acc img:hover{transform:translateY(-3px) scale(1.08);filter:drop-shadow(0 6px 10px rgba(0,102,153,.25))}
+@media (prefers-reduced-motion:reduce){.acc img{transition:none}.acc img:hover{transform:none}}
 .acc .tx{display:flex;align-items:center;gap:8px;color:var(--muted);font-weight:600;font-size:.92rem}
 .acc .tx .ico{color:var(--brand)}
 
@@ -243,7 +246,7 @@ dialog.cd-dlg[open]{display:grid;grid-template-rows:minmax(0,1fr) auto;animation
 .pc{background:var(--white);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);display:grid}
 .pc .ph{position:relative;aspect-ratio:1/1;background:linear-gradient(160deg,#dfeef7,#bcd9ea);overflow:hidden}
 .pc .ph::before{content:"";position:absolute;left:50%;top:18%;width:130%;aspect-ratio:1;transform:translateX(-50%);border-radius:50%;border:1.5px solid rgba(0,102,153,.35)}
-.pc .ph img{position:relative;width:100%;height:100%;object-fit:cover;object-position:center 20%;filter:grayscale(1) contrast(1.05)}
+.pc .ph img{position:relative;width:100%;height:100%;object-fit:cover;object-position:center 20%}
 .pc .ph .mono{position:absolute;inset:0;display:grid;place-items:center;font:800 4rem var(--f-d);color:var(--brand);letter-spacing:-.04em}
 .pc .bd{padding:14px 16px 16px;display:grid;gap:2px}
 .pc b{font:800 1.02rem var(--f-d);color:var(--ink)}
@@ -251,7 +254,9 @@ dialog.cd-dlg[open]{display:grid;grid-template-rows:minmax(0,1fr) auto;animation
 .pc p{font-size:.84rem;color:var(--muted);margin-top:4px}
 .faculty{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;background:var(--wash);border-radius:var(--r);padding:14px 18px}
 .stack{display:flex}
-.stack span{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font:700 .72rem var(--f-d);color:#fff;background:var(--brand);border:2px solid var(--wash);margin-left:-8px}
+.stack span{position:relative;width:34px;height:34px;border-radius:50%;overflow:hidden;display:grid;place-items:center;font:700 .72rem var(--f-d);color:#fff;background:var(--brand);border:2px solid var(--wash);margin-left:-8px;transition:transform .25s var(--ease-out)}
+.stack span img{width:100%;height:100%;object-fit:cover;display:block}
+.stack span:hover{transform:translateY(-3px);z-index:1}
 .stack span:first-child{margin-left:0}
 .stack span:nth-child(2n){background:var(--ink-2)}
 .stack span:nth-child(3n){background:#2f86b2}
@@ -474,8 +479,8 @@ dialog.cd-dlg[open]{display:grid;grid-template-rows:minmax(0,1fr) auto;animation
 .roles li:hover::before{transform:none}
 .roles .ri{transition:transform .35s var(--ease-out)}
 .roles li:hover .ri{transform:scale(1.1) rotate(-6deg)}
-.pc .ph img{transition:filter .5s ease,transform .6s var(--ease-out)}
-.pc:hover .ph img{filter:grayscale(0);transform:scale(1.04)}
+.pc .ph img{transition:transform .6s var(--ease-out)}
+.pc:hover .ph img{transform:scale(1.04)}
 .pc{transition:transform .3s var(--ease-out),box-shadow .3s ease}
 .pc:hover{transform:translateY(-4px)}
 .rv{transition:transform .3s var(--ease-out),box-shadow .3s ease,border-color .3s ease}
@@ -545,8 +550,8 @@ dialog.cd-dlg[open]{display:grid;grid-template-rows:minmax(0,1fr) auto;animation
 .fc.deal{bottom:16%;left:0;animation-delay:-2s}
 .fc.deal .ico{color:var(--gold);background:rgba(255,205,87,.14)}
 .mini-stack{display:flex}
-.mini-stack i{font:700 .6rem/26px var(--f-d);font-style:normal;width:26px;height:26px;border-radius:50%;text-align:center;background:var(--brand);border:2px solid #12304d;margin-left:-8px;color:#fff}
-.mini-stack i:first-child{margin-left:0}.mini-stack i:nth-child(2){background:#2f86b2}.mini-stack i:nth-child(3){background:var(--ink)}
+.mini-stack img{width:26px;height:26px;border-radius:50%;object-fit:cover;border:2px solid #12304d;margin-left:-8px}
+.mini-stack img:first-child{margin-left:0}
 .name{position:absolute;z-index:3;left:50%;bottom:4%;transform:translateX(-50%);text-align:center;background:var(--white);color:var(--ink);border-radius:12px;padding:8px 16px;display:grid;box-shadow:0 14px 30px -12px rgba(0,0,0,.6);white-space:nowrap}
 .name b{font:800 .92rem var(--f-d)}
 .name small{font-size:.72rem;color:var(--brand);font-weight:600}
@@ -686,7 +691,7 @@ dialog.cd-dlg[open]{display:grid;grid-template-rows:minmax(0,1fr) auto;animation
       <li><a href="https://boontaxeducators.com/">Self-Study Courses</a></li>
       <li><a class="books" href="https://boontaxeducators.com/">Books</a></li>
     </ul></nav>
-    <a class="btn btn-gold hdr-cta" href="#enroll">Get the Pass</a>
+    <a class="btn btn-gold hdr-cta" href="#enroll">Enroll for 2027</a>
   </div>
 </header>
 
@@ -729,7 +734,7 @@ dialog.cd-dlg[open]{display:grid;grid-template-rows:minmax(0,1fr) auto;animation
         <div class="fc hrs"><svg class="ico"><use href="#i-award"/></svg><div><b class="tnum">53 hrs</b><small>CPE / CE scheduled</small></div></div>
         <div class="fc web"><svg class="ico"><use href="#i-play"/></svg><div><b class="tnum" id="n-web">26+</b><small>Live webinars</small></div></div>
         <div class="fc irs"><svg class="ico"><use href="#i-shield"/></svg><div><b>IRS approved</b><small>CE provider</small></div></div>
-        <div class="fc fac"><span class="mini-stack"><i>JB</i><i>SH</i><i>MS</i></span><div><b class="tnum">19</b><small>Expert instructors</small></div></div>
+        <div class="fc fac"><span class="mini-stack"><img src="img/fac/trish-turner.jpg" alt=""><img src="img/fac/susan-harper.jpg" alt=""><img src="img/fac/michael-sullivan.jpg" alt=""></span><div><b class="tnum">19</b><small>Expert instructors</small></div></div>
         <div class="fc deal eb"><svg class="ico"><use href="#i-tag"/></svg><div><small>Code EARLY2027</small><b>$999 · Save $200</b></div></div>
       </div>
 
@@ -758,7 +763,7 @@ dialog.cd-dlg[open]{display:grid;grid-template-rows:minmax(0,1fr) auto;animation
 <div class="acc"><div class="wrap">
   <p>Accredited continuing education</p>
   <img src="img/irs-black.png" alt="IRS Approved Continuing Education Provider" width="74" height="44">
-  <span class="tx"><svg class="ico"><use href="#i-shield"/></svg>NASBA Registry CPE Sponsor</span>
+  <img class="nasba" src="img/nasba-blue.webp" alt="NASBA National Registry of CPE Sponsors" width="525" height="465">
   <span class="tx"><svg class="ico"><use href="#i-clock"/></svg>Every course 1:00 PM ET</span>
 </div></div>
 
@@ -848,7 +853,7 @@ dialog.cd-dlg[open]{display:grid;grid-template-rows:minmax(0,1fr) auto;animation
         <div class="bd"><b>C. Steven Boon, EA</b><span class="rl">Former IRS CI Special Agent</span><p>Nearly two decades with IRS Criminal Investigation.</p></div>
       </article>
       <article class="pc">
-        <div class="ph"><span class="mono" aria-hidden="true">VB</span></div>
+        <div class="ph"><img src="img/victoria-boon.jpg" alt="Victoria Boon" width="640" height="640"></div>
         <div class="bd"><b>Victoria Boon, CPA, EA</b><span class="rl">Former IRS LB&amp;I</span><p>20+ years of federal tax and audit experience.</p></div>
       </article>
       <div class="faculty">
@@ -1112,8 +1117,8 @@ dlg.addEventListener('click',e=>{if(e.target===dlg||e.target.closest('.dl-x'))cl
 document.getElementById('dl-cta').addEventListener('click',closeDlg);
 
 /* Faculty avatars */
-const FAC=['Jim Buttonow','Ryan Schutz','Susan Harper','Mark Silva','Trish Turner','Sherry Behr'];
-document.getElementById('stack').innerHTML=FAC.map(n=>`<span>${n.split(' ').map(s=>s[0]).join('')}</span>`).join('')+'<span class="more-n">+11</span>';
+const FAC=[['Trish Turner','trish-turner'],['Susan Harper','susan-harper'],['Michael D. Sullivan','michael-sullivan'],['Brian Bernhardt','brian-bernhardt'],['Kim Tyson','kim-tyson'],['Patrick Luna','patrick-luna']];
+document.getElementById('stack').innerHTML=FAC.map(([n,f])=>`<span title="${n}"><img src="img/fac/${f}.jpg" alt="" width="34" height="34" loading="lazy"></span>`).join('')+'<span class="more-n">+11</span>';
 
 /* Reviews marquee (verbatim from current All Access page; long ones shortened with …) */
 const REV=[
