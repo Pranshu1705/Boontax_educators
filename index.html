@@ -718,7 +718,7 @@ dialog.cd-dlg[open]{display:grid;grid-template-rows:minmax(0,1fr) auto;animation
       <h1 id="h1">2027 Boon Tax Pro <b>All Access Pass</b></h1>
       <p class="one">A full year of expert-led tax continuing education. Every scheduled live webinar, January through December, with one pass.</p>
       <div class="ctas">
-        <a class="btn btn-w" href="#enroll">Get Your 2027 All Access Pass <svg class="ico"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-w" href="register.html">Get Your 2027 All Access Pass <svg class="ico"><use href="#i-arrow"/></svg></a>
         <a class="btn btn-o" href="#schedule">View Schedule</a>
       </div>
       <div class="facts">
@@ -804,7 +804,7 @@ dialog.cd-dlg[open]{display:grid;grid-template-rows:minmax(0,1fr) auto;animation
         <li><svg class="ico"><use href="#i-check"/></svg>Plan your CPE/CE all year</li>
       </ul>
       <div class="ctas">
-        <a class="btn btn-gold" href="#enroll">Get Your 2027 All Access Pass <svg class="ico"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-gold" href="register.html">Get Your 2027 All Access Pass <svg class="ico"><use href="#i-arrow"/></svg></a>
         <a class="btn btn-o" href="#schedule">See the 2027 schedule</a>
       </div>
     </div>
@@ -883,7 +883,7 @@ dialog.cd-dlg[open]{display:grid;grid-template-rows:minmax(0,1fr) auto;animation
         <h2 id="pr-h">Save <span>$200</span> when you enroll by January 15, 2027</h2>
         <div class="row">
           <span class="code">EARLY2027 <button type="button" data-copy="EARLY2027"><svg class="ico"><use href="#i-copy"/></svg>Copy</button></span>
-          <a class="btn btn-b" href="#enroll">Claim $999 price</a>
+          <a class="btn btn-b" href="register.html">Claim $999 price</a>
         </div>
       </div>
       <div class="cd" id="countdown" aria-label="Time left in early-bird offer">
@@ -925,7 +925,7 @@ dialog.cd-dlg[open]{display:grid;grid-template-rows:minmax(0,1fr) auto;animation
           <li><svg class="ico"><use href="#i-check"/></svg>New eligible courses included</li>
           <li><svg class="ico"><use href="#i-check"/></svg>Recordings and presentation materials</li>
         </ul>
-        <a class="btn btn-gold" href="https://boontaxeducators.com/" id="buy">Get Your 2027 All Access Pass <svg class="ico"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-gold" href="register.html" id="buy">Get Your 2027 All Access Pass <svg class="ico"><use href="#i-arrow"/></svg></a>
         <p class="fine"><span class="eb">Apply code <b>EARLY2027</b> at checkout · </span>One-time purchase, no auto-renewal</p>
       </div>
     </div>
@@ -969,7 +969,7 @@ dialog.cd-dlg[open]{display:grid;grid-template-rows:minmax(0,1fr) auto;animation
     </ul>
     <div class="fin-price eb"><span class="tnum">$999</span><s class="tnum">$1,199</s><em>Save $200 with EARLY2027 · ends Jan 15, 2027</em></div>
     <div class="ctas">
-      <a class="btn btn-gold btn-lg" href="#enroll">Get Your 2027 All Access Pass <svg class="ico"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-gold btn-lg" href="register.html">Get Your 2027 All Access Pass <svg class="ico"><use href="#i-arrow"/></svg></a>
       <a class="btn btn-o btn-lg" href="#schedule">View the full schedule</a>
     </div>
   </div>
@@ -991,6 +991,7 @@ dialog.cd-dlg[open]{display:grid;grid-template-rows:minmax(0,1fr) auto;animation
     <a class="btn btn-gold" href="#enroll" id="dl-cta">Get Your 2027 All Access Pass <svg class="ico"><use href="#i-arrow"/></svg></a>
   </div>
 </dialog>
+
 
 <div class="buybar" id="buybar" aria-hidden="true">
   <div><b class="tnum"><span class="eb">$999<s>$1,199</s></span><span class="rp">$1,199</span></b><small>2027 All Access Pass</small></div>
@@ -1115,6 +1116,7 @@ function closeDlg(){if(dlg.open){dlg.close?dlg.close():dlg.removeAttribute('open
 dlg.addEventListener('close',()=>{if(lastFocus)lastFocus.focus();});
 dlg.addEventListener('click',e=>{if(e.target===dlg||e.target.closest('.dl-x'))closeDlg();});
 document.getElementById('dl-cta').addEventListener('click',closeDlg);
+
 
 /* Faculty avatars */
 const FAC=[['Trish Turner','trish-turner'],['Susan Harper','susan-harper'],['Michael D. Sullivan','michael-sullivan'],['Brian Bernhardt','brian-bernhardt'],['Kim Tyson','kim-tyson'],['Patrick Luna','patrick-luna']];
